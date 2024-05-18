@@ -1,3 +1,3 @@
 <header>
-  <a href="/php-login">Your App Name</a>
+  <a href="/php-login">Pentatech IT Solutions</a>
 </header>

@@ -21,24 +21,30 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Welcome to you WebApp</title>
+    <title>Welcome to your WebApp</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
   </head>
   <body>
-    <?php require 'partials/header.php' ?>
-
-    <?php if(!empty($user)): ?>
-      <br> Welcome. <?= $user['email']; ?>
-      <br>You are Successfully Logged In
-      <a href="logout.php">
-        Logout
-      </a>
+    <?php if(!empty($user)): 
+      header('Location: /php-login.php'); ?>
     <?php else: ?>
-      <h1>Please Login or SignUp</h1>
-
-      <a href="login.php">Login</a> or
-      <a href="signup.php">SignUp</a>
+      <div class="container">
+        <div class="title">
+          Welcome to PentaTech IT-Solutions
+        </div>
+        <div class="content">
+          <div style="text-align: center;">
+            <ul style="list-style: none;">
+              <br />
+              <li><a href="login.php" style="font-size: 1.6rem;">Login page</a></li>
+              <br />
+              <li><a href="signup.html" style="font-size: 1.6rem;">SignUp page</a></li>
+              <br />
+            </ul>
+          </div>
+        </div>
+      </div>
     <?php endif; ?>
   </body>
 </html>
