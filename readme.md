@@ -119,7 +119,7 @@ Here's the form used to Create or Update a team member...
 And there's also an option to create a new Team, using the following form. The Read, Update, or Delete operations for Teams is not yet implemented.
 
 <div align="center">
-  <img src="/assets/images/team_form.PNG" alt="Sign up" width="600"  height="auto" />
+  <img src="/assets/images/team_form.PNG" alt="Sign up" width="350"  height="auto" />
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
