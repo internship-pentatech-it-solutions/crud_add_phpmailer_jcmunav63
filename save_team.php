@@ -6,11 +6,11 @@ $name = $_POST['name'];
 $description = $_POST['description'];
 
 if ($id) {
-    // Update existing team
+    // UPDATE EXISTING TEAM
     $stmt = $conn->prepare("UPDATE teams SET name = ?, description = ? WHERE id = ?");
     $stmt->execute([$name, $description, $id]);
 } else {
-    // Add new team
+    // ADD NEW TEAM
     $stmt = $conn->prepare("INSERT INTO teams (name, description) VALUES (?, ?)");
     $stmt->execute([$name, $description]);
 }

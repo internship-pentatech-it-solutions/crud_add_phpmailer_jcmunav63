@@ -33,7 +33,7 @@ if (isset($_GET['id'])) {
       <label for="teams_id">Team:</label>
       <select name="teams_id" required>
           <?php
-          $teams = $pdo->query("SELECT * FROM teams");
+          $teams = $conn->query("SELECT * FROM teams");
           foreach ($teams as $team) {
               $selected = $team['id'] == $member['teams_id'] ? 'selected' : '';
               echo "<option value='{$team['id']}' {$selected}>{$team['name']}</option>";

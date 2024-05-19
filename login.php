@@ -1,7 +1,5 @@
 <?php
-
   session_start();
-
   if (isset($_SESSION['user_id'])) {
     header('Location: /php-login-simple/dashboard.php');
   }
@@ -12,7 +10,6 @@
     $records->bindParam(':email', $_POST['email']);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
-
     $message = '';
 
     if (!empty($results)) {
@@ -27,9 +24,7 @@
       $message = 'Sorry, the email does not exist';
     }
   }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -61,8 +56,6 @@
         <?php if(!empty($message)): ?>
           <p> <?= $message ?></p>
         <?php endif; ?>
-        <!-- <h1>Login</h1> -->
-        <!-- <span>or <a href="signup.php">SignUp</a></span> -->
         <form action="login.php" method="POST">
           <div class="user-details">
             <div class="input-box">

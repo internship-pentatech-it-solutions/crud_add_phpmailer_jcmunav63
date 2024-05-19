@@ -1,7 +1,5 @@
 <?php
-
   require 'database.php';
-
   $message = '';
 
   if (!empty($_POST['email']) && !empty($_POST['password'])) {
@@ -67,7 +65,6 @@
           <div class="button">
             <input type="submit" name="signup-button" value="Register" />
           </div>
-          
           <p>Already have an account? <a href="./login.php">Log in</a></p>
         </form>
       </div>

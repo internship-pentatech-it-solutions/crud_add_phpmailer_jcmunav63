@@ -14,9 +14,7 @@ if (isset($_GET['id'])) {
         $team = $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

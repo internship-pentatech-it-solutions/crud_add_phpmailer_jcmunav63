@@ -1,6 +1,5 @@
 <?php
 require_once 'database.php';
-// include '..\config\db_connect.php';
 
 $sql = "SELECT members.*, teams.name as team_name FROM members LEFT JOIN teams ON members.teams_id = teams.id";
 $stmt = $conn->prepare($sql);
@@ -25,5 +24,4 @@ if (!empty($members)) {
 } else {
     echo "<tr><td colspan='7'>No members found</td></tr>";
 }
-// $conn->close();
 ?>

@@ -39,7 +39,7 @@
               <br />
               <li><a href="login.php" style="font-size: 1.6rem;">Login page</a></li>
               <br />
-              <li><a href="signup.html" style="font-size: 1.6rem;">SignUp page</a></li>
+              <li><a href="signup.php" style="font-size: 1.6rem;">SignUp page</a></li>
               <br />
             </ul>
           </div>
