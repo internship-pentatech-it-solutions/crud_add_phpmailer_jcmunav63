@@ -24,7 +24,7 @@
     </style>
   </head>
   <body>
-    <div>
+    <div class="dashboard-container">
       <header>
         <div class="title">Welcome to PentaTech IT-Solutions - Team Members Dashboard</div>
         <div class="header-div">
@@ -33,8 +33,8 @@
           <p><a href="logout.php" style="font-size: 1.3rem;">Logout</a></p>
         </div>
       </header>
-      <div class="dash-container">
-        <div style="text-align: center;">
+      <!-- <div> -->
+        <div class="table-container" style="text-align: center;">
           <table id="membersTable" class="display">
             <thead>
               <tr>
@@ -52,13 +52,22 @@
             </tbody>
           </table>
         </div>
-      </div>
+      <!-- </div> -->
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
       <script>
+        // $(document).ready(function() {
+        //     $('#membersTable').DataTable();
+        // });
         $(document).ready(function() {
-            $('#membersTable').DataTable();
-        });
+          $('#members-table').DataTable({
+                "dom": '<"bottom"flp><"clear">',
+                "paging": true,
+                "searching": false,
+                "ordering": true,
+                "pageLength": 5
+            });
+          });
       </script>
     </div>
   </body>
