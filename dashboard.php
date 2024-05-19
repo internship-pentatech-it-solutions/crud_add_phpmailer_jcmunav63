@@ -1,8 +1,8 @@
 <?php
   session_start();
-  // IF THE USER IS NOT LOGGED IN HE IS REDIRECTED TO INDEX.HTML
+  // IF THE USER IS NOT LOGGED IN HE/SHE IS REDIRECTED TO INDEX.PHP
   if (!isset($_SESSION['user_id'])) {
-    header("Location: /php-login-simple/index.php");
+    header("Location: /crud-project/index.php");
     exit();
   }
 ?>
@@ -30,10 +30,9 @@
         <div class="header-div">
           <button onclick="window.location.href='team_form.php'" class="dash-btn">Add Team</button>
           <button onclick="window.location.href='member_form.php'" class="dash-btn">Add Member</button>
-          <p><a href="logout.php" style="font-size: 1.3rem;">Logout</a></p>
+          <p><a href="./logout.php" style="font-size: 1.3rem;">Logout</a></p>
         </div>
       </header>
-      <!-- <div> -->
         <div class="table-container" style="text-align: center;">
           <table id="membersTable" class="display">
             <thead>
@@ -52,13 +51,9 @@
             </tbody>
           </table>
         </div>
-      <!-- </div> -->
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
       <script>
-        // $(document).ready(function() {
-        //     $('#membersTable').DataTable();
-        // });
         $(document).ready(function() {
           $('#members-table').DataTable({
                 "dom": '<"bottom"flp><"clear">',

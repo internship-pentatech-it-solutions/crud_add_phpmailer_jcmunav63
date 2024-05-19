@@ -27,7 +27,7 @@
   </head>
   <body>
     <?php if(!empty($user)): 
-      header('Location: /php-login.php'); ?>
+      header('Location: /dashboard.php'); ?>
     <?php else: ?>
       <div class="container">
         <div class="title">

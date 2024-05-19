@@ -89,10 +89,38 @@ You can call the database something like "crud_project". You can use PHPMyAdmin'
 
 To run the project, use the browser to enter the following path...
 
-http://localhost/CRUDProject/signup.html or
+http://localhost/crudproject/index.php
 
-http://localhost/CRUDProject/login.html
+In this home page you will find two links to enter the application, the signup.php form page, if you are not registered yet, or the login.php form page, if you are already registered.
+   http://localhost/crudproject/signup.php
 
+   http://localhost/crudproject/login.php
+
+See the images of these two forms below.
+
+<div align="center">
+  <img src="/assets/images/signup_form.PNG" alt="Sign up" width="500"  height="auto" />
+  <br/>
+  <img src="/assets/images/login_form.PNG" alt="Sign up" width="500"  height="auto" />
+</div>
+
+After logging in, the user is redirected to a Team members' Dashboard. Here, the user can Create, Read, Update, or Delete (CRUD) a team member.
+
+<div align="center">
+  <img src="/assets/images/dashboard.PNG" alt="Sign up" width="600"  height="auto" />
+</div>
+
+Here's the form used to Create or Update a team member...
+
+<div align="center">
+  <img src="/assets/images/member_form.PNG" alt="Sign up" width="600"  height="auto" />
+</div>
+
+And there's also an option to create a new Team, using the following form. The Read, Update, or Delete operations for Teams is not yet implemented.
+
+<div align="center">
+  <img src="/assets/images/team_form.PNG" alt="Sign up" width="600"  height="auto" />
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

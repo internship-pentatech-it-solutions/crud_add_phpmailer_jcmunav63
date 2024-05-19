@@ -1,7 +1,7 @@
 <?php
   session_start();
   if (isset($_SESSION['user_id'])) {
-    header('Location: /php-login-simple/dashboard.php');
+    header('Location: /crud-project/dashboard.php');
   }
   require 'database.php';
 
@@ -16,7 +16,7 @@
       if (password_verify($_POST['password'], $results['password'])) {
         $_SESSION['user_id'] = $results['id'];
         $_SESSION['fullname'] = $results['fullname'];
-        header("Location: /php-login-simple/dashboard.php");
+        header("Location: /crud-project/dashboard.php");
       } else {
         $message = 'Sorry, the email or password don\'t match';
       }
@@ -30,7 +30,6 @@
   <head>
     <meta charset="utf-8">
     <title>Login Form | PentaTech-IT-Solutions</title>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
     <link rel="stylesheet" href="assets/css/style2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -68,7 +67,7 @@
             </div>
           </div>
           <div class="button">
-          <input type="submit" value="Login">
+            <input type="submit" value="Login">
           </div>
           <p>Don't have an account? <a href="signup.php">Signup</a></p>
         </form>
