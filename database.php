@@ -3,12 +3,22 @@
 $server = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'php_login_database';
+$database = 'team_management';
 
 try {
   $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
 } catch (PDOException $e) {
-  die('Connection Failed: ' . $e->getMessage());
+  echo '<script>
+                Swal.fire({
+                    icon: "success",
+                    title: "Login successful!",
+                    showConfirmButton: false,
+                    timer: 2000
+                }).then(function() {
+                    window.location.href = "/crud_add_pdf_project/index.php";
+                });
+            </script>';
+  // die('Connection Failed: ' . $e->getMessage());
 }
 
 ?>

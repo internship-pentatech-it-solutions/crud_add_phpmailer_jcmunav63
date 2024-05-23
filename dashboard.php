@@ -2,8 +2,18 @@
   session_start();
   // IF THE USER IS NOT LOGGED IN HE/SHE IS REDIRECTED TO INDEX.PHP
   if (!isset($_SESSION['user_id'])) {
-    header("Location: /crud-project/index.php");
-    exit();
+    echo '<script>
+                Swal.fire({
+                    icon: "error",
+                    title: "You session has expired or you are not logged in.",
+                    showConfirmButton: false,
+                    timer: 2000
+                }).then(function() {
+                    window.location.href = "/crud_add_pdf_project/login.php";
+                });
+            </script>';
+    // header("Location: /crud_add_pdf_project/index.php");
+    // exit();
   }
 ?>
 <html lang="en" dir="ltr">
@@ -12,6 +22,8 @@
     <title>Home Page / Dashboard | PentaTech-IT-Solutions</title>
     <link rel="stylesheet" href="assets/css/style3.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
       .input-box {
         width: 100% !important;

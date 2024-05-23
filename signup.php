@@ -13,9 +13,26 @@
     $stmt->bindParam(':phonenumber', $_POST['phonenumber']);
 
     if ($stmt->execute()) {
-      $message = 'Successfully created new user';
+      echo '<script>
+                Swal.fire({
+                    icon: "success",
+                    title: "Successfully created new user!",
+                    showConfirmButton: false,
+                    timer: 2000
+                }).then(function() {
+                    window.location.href = "/crud_add_pdf_project/login.php";
+                });
+            </script>';
+      // $message = 'Successfully created new user';
     } else {
-      $message = 'Sorry there must have been an issue creating your account';
+      echo '<script>
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Sorry there must have been an issue creating your account",
+                });
+            </script>';
+      // $message = 'Sorry there must have been an issue creating your account';
     }
   }
 ?>
@@ -26,6 +43,8 @@
     <title>SignUp Form | PentaTech-IT-Solutions</title>
     <link rel="stylesheet" href="./assets/css/style2.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div class="container">

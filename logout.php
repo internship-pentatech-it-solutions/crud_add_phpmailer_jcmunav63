@@ -5,5 +5,5 @@
 
   session_destroy();
 
-  header('Location: /php-login-simple/index.php');
+  header('Location: /crud_add_pdf_project/index.php');
 ?>

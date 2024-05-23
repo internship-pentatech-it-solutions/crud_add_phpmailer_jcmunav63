@@ -22,6 +22,13 @@ if (!empty($members)) {
           </tr>";
   }
 } else {
-    echo "<tr><td colspan='7'>No members found</td></tr>";
+  echo '<script>
+                Swal.fire({
+                    icon: "question",
+                    title: "No members found!",
+                    text: "Please add some members.",
+                });
+            </script>';
+  // echo "<tr><td colspan='7'>No members found</td></tr>";
 }
 ?>

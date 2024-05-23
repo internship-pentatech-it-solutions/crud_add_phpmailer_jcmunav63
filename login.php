@@ -16,12 +16,36 @@
       if (password_verify($_POST['password'], $results['password'])) {
         $_SESSION['user_id'] = $results['id'];
         $_SESSION['fullname'] = $results['fullname'];
-        header("Location: /crud-project/dashboard.php");
+        echo '<script>
+                Swal.fire({
+                    icon: "success",
+                    title: "Login successful!",
+                    showConfirmButton: false,
+                    timer: 2000
+                }).then(function() {
+                    window.location.href = "/crud_add_pdf_project/dashboard.php";
+                });
+            </script>';
+        //header("Location: /crud-project/dashboard.php");
       } else {
-        $message = 'Sorry, the email or password don\'t match';
+        echo '<script>
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Sorry, the email or password don\'t match",
+                });
+            </script>';
+        // $message = 'Sorry, the email or password don\'t match';
       }
     } else {
-      $message = 'Sorry, the email does not exist';
+      echo '<script>
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Sorry, the email does not exist",
+                });
+            </script>';
+      // $message = 'Sorry, the email does not exist';
     }
   }
 ?>
@@ -32,6 +56,8 @@
     <title>Login Form | PentaTech-IT-Solutions</title>
     <link rel="stylesheet" href="assets/css/style2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
       .input-box {
         width: 100% !important;
