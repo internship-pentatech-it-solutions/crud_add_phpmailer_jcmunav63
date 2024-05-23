@@ -24,6 +24,8 @@
     <title>Welcome to your WebApp</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <?php if(!empty($user)): 
@@ -37,9 +39,9 @@
           <div style="text-align: center;">
             <ul style="list-style: none;">
               <br />
-              <li><a href="login.php" style="font-size: 1.6rem;">Login page</a></li>
+              <li><a href="/crud_add_pdf_project_jcmunav63/login.php" style="font-size: 1.6rem;">Login page</a></li>
               <br />
-              <li><a href="signup.php" style="font-size: 1.6rem;">SignUp page</a></li>
+              <li><a href="/crud_add_pdf_project_jcmunav63/signup.php" style="font-size: 1.6rem;">SignUp page</a></li>
               <br />
             </ul>
           </div>

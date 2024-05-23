@@ -16,8 +16,8 @@ if (!empty($members)) {
             <td>{$row['about']}</td>
             <td><img src='{$row['image_url']}' width='50' height='50'></td>
             <td>
-                <a href='member_form.php?id={$row['id']}'>Edit</a>
-                <a href='delete_member.php?id={$row['id']}'>Delete</a>
+                <a href='/crud_add_pdf_project_jcmunav63/member_form.php?id={$row['id']}'>Edit</a>
+                <a href='/crud_add_pdf_project_jcmunav63/delete_member.php?id={$row['id']}'>Delete</a>
             </td>
           </tr>";
   }
@@ -29,6 +29,6 @@ if (!empty($members)) {
                     text: "Please add some members.",
                 });
             </script>';
-  // echo "<tr><td colspan='7'>No members found</td></tr>";
+  echo "<tr><td colspan='7'>No members found</td></tr>";
 }
 ?>

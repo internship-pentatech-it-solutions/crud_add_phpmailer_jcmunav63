@@ -9,7 +9,7 @@
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    window.location.href = "/crud_add_pdf_project/login.php";
+                    window.location.href = "/crud_add_pdf_project_jcmunav63/login.php";
                 });
             </script>';
     // header("Location: /crud_add_pdf_project/index.php");
@@ -40,8 +40,8 @@
       <header>
         <div class="title">Welcome to PentaTech IT-Solutions - Team Members Dashboard</div>
         <div class="header-div">
-          <button onclick="window.location.href='team_form.php'" class="dash-btn">Add Team</button>
-          <button onclick="window.location.href='member_form.php'" class="dash-btn">Add Member</button>
+          <button onclick="window.location.href='/crud_add_pdf_project_jcmunav63/team_form.php'" class="dash-btn">Add Team</button>
+          <button onclick="window.location.href='/crud_add_pdf_project_jcmunav63/member_form.php'" class="dash-btn">Add Member</button>
           <p><a href="./logout.php" style="font-size: 1.3rem;">Logout</a></p>
         </div>
       </header>

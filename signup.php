@@ -20,10 +20,10 @@
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    window.location.href = "/crud_add_pdf_project/login.php";
+                    window.location.href = "/crud_add_pdf_project_jcmunav63/login.php";
                 });
             </script>';
-      // $message = 'Successfully created new user';
+      $message = 'Successfully created new user';
     } else {
       echo '<script>
                 Swal.fire({
@@ -32,7 +32,7 @@
                     text: "Sorry there must have been an issue creating your account",
                 });
             </script>';
-      // $message = 'Sorry there must have been an issue creating your account';
+      $message = 'Sorry there must have been an issue creating your account';
     }
   }
 ?>
@@ -84,7 +84,7 @@
           <div class="button">
             <input type="submit" name="signup-button" value="Register" />
           </div>
-          <p>Already have an account? <a href="./login.php">Log in</a></p>
+          <p>Already have an account? <a href="/crud_add_pdf_project_jcmunav63/login.php">Log in</a></p>
         </form>
       </div>
     </div>

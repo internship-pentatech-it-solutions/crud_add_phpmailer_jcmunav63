@@ -1,12 +1,12 @@
 <?php
   session_start();
   if (isset($_SESSION['user_id'])) {
-    header('Location: /crud-project/dashboard.php');
+    header('Location: /crud_add_pdf_project_jcmunav63/dashboard.php');
   }
   require 'database.php';
 
   if (!empty($_POST['email']) && !empty($_POST['password'])) {
-    $records = $conn->prepare('SELECT id, email, password FROM users WHERE email = :email');
+    $records = $conn->prepare('SELECT id, fullname, email, password FROM users WHERE email = :email');
     $records->bindParam(':email', $_POST['email']);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
@@ -15,6 +15,7 @@
     if (!empty($results)) {
       if (password_verify($_POST['password'], $results['password'])) {
         $_SESSION['user_id'] = $results['id'];
+        $_SESSION['email'] = $results['email'];
         $_SESSION['fullname'] = $results['fullname'];
         echo '<script>
                 Swal.fire({
@@ -23,10 +24,10 @@
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    window.location.href = "/crud_add_pdf_project/dashboard.php";
+                    window.location.href = "/crud_add_pdf_project_jcmunav63/dashboard.php";
                 });
             </script>';
-        //header("Location: /crud-project/dashboard.php");
+        header("Location: /crud_add_pdf_project_jcmunav63/dashboard.php");
       } else {
         echo '<script>
                 Swal.fire({
@@ -35,7 +36,7 @@
                     text: "Sorry, the email or password don\'t match",
                 });
             </script>';
-        // $message = 'Sorry, the email or password don\'t match';
+        $message = 'Sorry, the email or password don\'t match';
       }
     } else {
       echo '<script>
@@ -45,7 +46,7 @@
                     text: "Sorry, the email does not exist",
                 });
             </script>';
-      // $message = 'Sorry, the email does not exist';
+      $message = 'Sorry, the email does not exist';
     }
   }
 ?>
@@ -95,7 +96,7 @@
           <div class="button">
             <input type="submit" value="Login">
           </div>
-          <p>Don't have an account? <a href="signup.php">Signup</a></p>
+          <p>Don't have an account? <a href="/crud_add_pdf_project_jcmunav63/signup.php">Signup</a></p>
         </form>
       </div>
     </div>
