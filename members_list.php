@@ -16,8 +16,8 @@ if (!empty($members)) {
             <td>{$row['about']}</td>
             <td><img src='{$row['image_url']}' width='50' height='50'></td>
             <td>
-                <a href='/crud_add_pdf_project_jcmunav63/member_form.php?id={$row['id']}'>Edit</a>
-                <a href='/crud_add_pdf_project_jcmunav63/delete_member.php?id={$row['id']}'>Delete</a>
+                <a href='/crud_add_pdf_project/member_form.php?id={$row['id']}'>Edit</a>
+                <a href='/crud_add_pdf_project/delete_member.php?id={$row['id']}'>Delete</a>
             </td>
           </tr>";
   }

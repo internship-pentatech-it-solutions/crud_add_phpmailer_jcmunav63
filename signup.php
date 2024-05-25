@@ -1,4 +1,8 @@
 <?php
+  session_start();
+  if (isset($_SESSION['user_id'])) {
+    header('Location: /crud_add_pdf_project/dashboard.php');
+  }
   require 'database.php';
   $message = '';
 
@@ -20,10 +24,11 @@
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    window.location.href = "/crud_add_pdf_project_jcmunav63/login.php";
+                    window.location.href = "/crud_add_pdf_project/login.php";
                 });
             </script>';
       $message = 'Successfully created new user';
+      header('Location: /crud_add_pdf_project/login.php');
     } else {
       echo '<script>
                 Swal.fire({
@@ -43,8 +48,8 @@
     <title>SignUp Form | PentaTech-IT-Solutions</title>
     <link rel="stylesheet" href="./assets/css/style2.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -84,7 +89,7 @@
           <div class="button">
             <input type="submit" name="signup-button" value="Register" />
           </div>
-          <p>Already have an account? <a href="/crud_add_pdf_project_jcmunav63/login.php">Log in</a></p>
+          <p>Already have an account? <a href="/crud_add_pdf_project/login.php">Log in</a></p>
         </form>
       </div>
     </div>

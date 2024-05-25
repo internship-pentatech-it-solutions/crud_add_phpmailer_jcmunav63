@@ -1,9 +1,10 @@
 <?php
   session_start();
   if (isset($_SESSION['user_id'])) {
-    header('Location: /crud_add_pdf_project_jcmunav63/dashboard.php');
+    header('Location: /crud_add_pdf_project/dashboard.php');
   }
   require 'database.php';
+  $message = '';
 
   if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $records = $conn->prepare('SELECT id, fullname, email, password FROM users WHERE email = :email');
@@ -17,6 +18,7 @@
         $_SESSION['user_id'] = $results['id'];
         $_SESSION['email'] = $results['email'];
         $_SESSION['fullname'] = $results['fullname'];
+        // $user = $results;
         echo '<script>
                 Swal.fire({
                     icon: "success",
@@ -24,10 +26,10 @@
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    window.location.href = "/crud_add_pdf_project_jcmunav63/dashboard.php";
+                    window.location.href = "/crud_add_pdf_project/dashboard.php";
                 });
             </script>';
-        header("Location: /crud_add_pdf_project_jcmunav63/dashboard.php");
+        header("Location: /crud_add_pdf_project/dashboard.php");
       } else {
         echo '<script>
                 Swal.fire({
@@ -37,6 +39,7 @@
                 });
             </script>';
         $message = 'Sorry, the email or password don\'t match';
+        // $user = [];
       }
     } else {
       echo '<script>
@@ -47,6 +50,7 @@
                 });
             </script>';
       $message = 'Sorry, the email does not exist';
+      // $user = [];
     }
   }
 ?>
@@ -57,8 +61,8 @@
     <title>Login Form | PentaTech-IT-Solutions</title>
     <link rel="stylesheet" href="assets/css/style2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
     <style>
       .input-box {
         width: 100% !important;
@@ -96,7 +100,7 @@
           <div class="button">
             <input type="submit" value="Login">
           </div>
-          <p>Don't have an account? <a href="/crud_add_pdf_project_jcmunav63/signup.php">Signup</a></p>
+          <p>Don't have an account? <a href="/crud_add_pdf_project/signup.php">Signup</a></p>
         </form>
       </div>
     </div>
