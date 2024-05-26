@@ -48,6 +48,7 @@
           <div class="header-div">
             <button onclick="window.location.href='/crud_add_pdf_project/teams.php'" class="dash-btn">Teams table</button>
             <button onclick="window.location.href='/crud_add_pdf_project/member_form.php'" class="dash-btn">Add Member</button>
+            <button onclick="window.location.href='/crud_add_pdf_project/pdf_member_list.php'" class="dash-btn">PDF Member List</button>
             <p><a href="./logout.php" style="font-size: 1.3rem;">Logout</a></p>
           </div>
         </header>

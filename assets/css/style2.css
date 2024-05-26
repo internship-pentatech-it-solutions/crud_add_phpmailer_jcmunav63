@@ -49,7 +49,7 @@ th, td {
 }
 .dashboard-container .title::before{
   content: "";
-  /* position: absolute; */
+  position: absolute;
   left: 0;
   bottom: 0;
   height: 3px;
