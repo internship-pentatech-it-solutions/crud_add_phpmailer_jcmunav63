@@ -44,7 +44,7 @@ if (isset($_GET['generate_pdf'])) {
       <title>PDF Report | PentaTech-IT-Solutions</title>
       <style>
         body { font-family: DejaVu Sans, sans-serif; }
-        .header { text-align: center; margin-bottom: 20px; position: absolute; top: 10ñx;}
+        .header { text-align: center; margin-bottom: 20px;}
         .content { margin: 0 auto; width: 90%; }
         .content h2 { text-align: center; }
         .content p { margin: 10px 0; }
@@ -59,14 +59,14 @@ if (isset($_GET['generate_pdf'])) {
           </tr>
         </table>
       </div>
-      <div class="content">
+      <div class="table-container">
         <table style="border: none;">
           <tr>
             <td style="border: none;">
               <img src="<?= getImageBase64($member['image_url']) ?>" width='70px' height='auto'>
             </td>
             <td style="border: none;">
-              <h2 style="font-size: 1.6rem; vertical-align: center;"><?= "{$member['firstname']} {$member['lastname']}" ?></h2>
+              <h2 style="font-size: 1.6rem; vertical-align: center; margin-left: 20px;"><?= "{$member['firstname']} {$member['lastname']}" ?></h2>
             </td>
           </tr>
         </table>
