@@ -78,7 +78,7 @@
             $('#members-table').DataTable({
                   "dom": '<"bottom"flp><"clear">',
                   "paging": true,
-                  "searching": false,
+                  "searching": true,
                   "ordering": true,
                   "pageLength": 5
               });
