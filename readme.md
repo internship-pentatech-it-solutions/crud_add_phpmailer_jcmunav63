@@ -1,10 +1,10 @@
-**Project's name: CRUD Project - CRUD operations using PHP & MySQL**
+**Project's name: Add PDF to CRUD Project - Add PDF to CRUD operations using domPDF**
 
 <a name="readme-top"></a>
 <div align="center">
     <img src="/logo_jcm_md.png" alt="main-logo" width="500"  height="auto" />
   <br/>
-  <h3><b>CRUDProject - CRUD operations using PHP</b></h3>
+  <h3><b>Add PDF to CRUDProject - Add PDF to CRUD operations using domPDF</b></h3>
 </div>
 
 📗 Table of Contents <a name="table_of-contents"></a>
@@ -23,9 +23,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-## 📖 About project - CRUDProject - CRUD operations using PHP <a name="about-project"></a>
+## 📖 About project - Add PDF to CRUDProject - Add PDF to CRUD operations using domPDF<a name="about-project"></a>
 
-The CRUDProject application is a simple PHP project to create a simple CRUD Web Application for users management. It uses PHP version 8.2.12 and MariaDB database server version 10.4.32. This project is part of the Pentatech IT Solutions PHP Internship program.
+This CRUDProject application is a simple PHP project to create a simple CRUD Web Application for users management. In this project we are adding the PDF export functionality for the Members List and the Member Details pages. It uses PHP version 8.2.12, MariaDB database server version 10.4.32, and an external library called domPDF. This project is part of the Pentatech IT Solutions PHP Internship program.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -64,12 +64,12 @@ Clone the CRUDProject repo. You can clone this project inside of XAMPP's public 
 
 ```sh
   cd C:\xampp\htdocs
-  git clone https://github.com/PentaTech-IT-Solutions/crud-project.git
+  git clone https://https://github.com/PentaTech-IT-Solutions/crud_add_pdf_project_jcmunav63
 ```
 
 ### Install
 
-This project requires the following dependencies: the PHP interpreter, the Apache Web Server, and a MySQL or MariaDB database server. All three components are bundled into XAMPP application (for Windows or Linux). Other similar software applications are WAMP (for Windows), LAMP (for Linux), and MAMP (for Mac).
+This project requires the following dependencies: the PHP interpreter, the Apache Web Server, a MySQL or MariaDB database server, the dependency manager Composer, and the third-party library called domPDF. The first three components are bundled into XAMPP application (for Windows or Linux). Other similar software applications are WAMP (for Windows), LAMP (for Linux), and MAMP (for Mac). The Composer and the domPDF components are installed using a command terminal.
 
 
 ### Database
@@ -83,18 +83,19 @@ You can call the database something like "crud_project". You can use PHPMyAdmin'
 - Create the crud_project database
 - Create a users table (it will contain 6 columns).
 - Create each column with the apropriate name, type, size, and other features. Columns are: id, username, fullname, email, password, phonenumber.
+- Create the additional tables: members table, to include all the information about each member, and a teams table, if you want to include a name and description for each team.
 
 
 ### Usage
 
 To run the project, use the browser to enter the following path...
 
-http://localhost/crudproject/index.php
+http://localhost/crud_add_pdf_project/index.php
 
 In this home page you will find two links to enter the application, the signup.php form page, if you are not registered yet, or the login.php form page, if you are already registered.
-   http://localhost/crudproject/signup.php
+   http://localhost/crud_add_pdf_project/signup.php
 
-   http://localhost/crudproject/login.php
+   http://localhost/crud_add_pdf_project/login.php
 
 See the images of these two forms below.
 
@@ -116,11 +117,28 @@ Here's the form used to Create or Update a team member...
   <img src="/assets/images/member_form.PNG" alt="Sign up" width="600"  height="auto" />
 </div>
 
-And there's also an option to create a new Team, using the following form. The Read, Update, or Delete operations for Teams is not yet implemented.
+And there's also an option to create a new Team, using the following form. The Read, Update, or Delete operations for Teams are also implemented.
 
 <div align="center">
   <img src="/assets/images/team_form.PNG" alt="Sign up" width="350"  height="auto" />
 </div>
+
+For this project, we added the generation of two PDF reports to export the html content. the first one is the list of members that is displayed in the dashboard, and the second one is a specific details page, selected from the last name's link in the dashboard. The exported file is shown in the dashboard, as a pdf file, and it has a download or a print option for the user.
+
+Here are some example images for these two reports...
+
+  - Members list page (dashboard):
+<div align="center">
+  <img src="/assets/images/members_list.PNG" alt="Sign up" width="550"  height="auto" /><br />
+  <img src="/assets/images/members_list_pdf.PNG" alt="Sign up" width="650"  height="auto" />
+</div>
+
+  - Member details page:
+<div align="center">
+  <img src="/assets/images/member_details.PNG" alt="Sign up" width="550"  height="auto" /><br />
+  <img src="/assets/images/member_details_pdf.PNG" alt="Sign up" width="650"  height="auto" />
+</div>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
