@@ -1,10 +1,10 @@
-**Project's name: Add PDF to CRUD Project - Add PDF to CRUD operations using domPDF**
+**Project's name: CRUD Add PHPMailer**
 
 <a name="readme-top"></a>
 <div align="center">
     <img src="/logo_jcm_md.png" alt="main-logo" width="500"  height="auto" />
   <br/>
-  <h3><b>Add PDF to CRUDProject - Add PDF to CRUD operations using domPDF</b></h3>
+  <h3><b>CRUD Add PHPMailer</b></h3>
 </div>
 
 📗 Table of Contents <a name="table_of-contents"></a>
@@ -23,9 +23,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-## 📖 About project - Add PDF to CRUDProject - Add PDF to CRUD operations using domPDF<a name="about-project"></a>
+## 📖 About project - CRUD Add PHPMailer<a name="about-project"></a>
 
-This CRUDProject application is a simple PHP project to create a simple CRUD Web Application for users management. In this project we are adding the PDF export functionality for the Members List and the Member Details pages. It uses PHP version 8.2.12, MariaDB database server version 10.4.32, and an external library called domPDF. This project is part of the Pentatech IT Solutions PHP Internship program.
+This CRUD Project application is a PHP project to create a simple CRUD Web Application for users management. In this project we are adding the email sending functionality using the PHPMailer library. This project uses PHP version 8.2.12, MariaDB database server version 10.4.32, and two external libraries called domPDF and PHPMailer. This project is part of the Pentatech IT Solutions PHP Internship program.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -39,10 +39,10 @@ This CRUDProject application is a simple PHP project to create a simple CRUD Web
   </ul>
 
 ### Key Features <a name="key-features"></a>
-- **Login and Signup forms, developed in the previous project.**
-- **Implementation of session management.**
-- **Implement a dashboard with a list of Users**
-- **Implement CRUD operations for each user (Create, Read, Update, and Delete)**
+- **Login and Signup forms, with session management, developed in the first project.**
+- **Team users dashboard, including name, position, email, photo, and details. All CRUD operations were implemented in the second project.**
+- **Team users list and user deatils PDF report, using the domPDF library, implemented in the third projec.**
+- **Email creation and sending usinf¿g the PHPMailer library. This is the fourth project.**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -60,42 +60,42 @@ In order to run this project you need:
 Prerequisites: XAMPP application, including Apache web server, PHP (version 8), and MySQL DB server or MariaDB server. You can use a code editor like Visual Studio Code...
 
 ### Setup
-Clone the CRUDProject repo. You can clone this project inside of XAMPP's public folder called htdocs (in Windows C:\xampp\htdocs).
+Clone the crud_add_phpmailer_jcmunav63 repo. You can clone this project inside of XAMPP's public folder called htdocs (in Windows C:\xampp\htdocs).
 
 ```sh
   cd C:\xampp\htdocs
-  git clone https://https://github.com/PentaTech-IT-Solutions/crud_add_pdf_project_jcmunav63
+  git clone https://github.com/PentaTech-IT-Solutions/crud_add_phpmailer_jcmunav63
 ```
 
 ### Install
 
-This project requires the following dependencies: the PHP interpreter, the Apache Web Server, a MySQL or MariaDB database server, the dependency manager Composer, and the third-party library called domPDF. The first three components are bundled into XAMPP application (for Windows or Linux). Other similar software applications are WAMP (for Windows), LAMP (for Linux), and MAMP (for Mac). The Composer and the domPDF components are installed using a command terminal.
+This project requires the following dependencies: the PHP interpreter, the Apache Web Server, a MySQL or MariaDB database server, the dependency manager Composer, and the third-party libraries called domPDF and PHPMailer. The first three components are bundled into XAMPP application (for Windows or Linux). Other similar software applications are WAMP (for Windows), LAMP (for Linux), and MAMP (for Mac). The Composer, the domPDF, and the PHPMailer components are installed using a command terminal.
 
 
 ### Database
 
 Create a database using the url "localhost/phpmyadmin" in the browser. The PHPMyAdmin application will open to manage the database server.
 
-You can use the file database/team_management.sql inside of an SQL tab of the PHPMyAdmin application. It contains all the information to set up the database to start using it.
+You can use the file database/team_management.sql using the import tab of the PHPMyAdmin application. It contains all the information to set up the database to start using it.
 
-You can call the database something like "crud_project". You can use PHPMyAdmin's graphic interface to create the database and the table.
+The SQL file will create the tables and it will insert some example data. Otherwise, you can also use PHPMyAdmin's graphic interface to create the database and the tables.
 
-- Create the crud_project database
-- Create a users table (it will contain 6 columns).
-- Create each column with the apropriate name, type, size, and other features. Columns are: id, username, fullname, email, password, phonenumber.
-- Create the additional tables: members table, to include all the information about each member, and a teams table, if you want to include a name and description for each team.
+The suggested tables to use are...
+- A users table (it will contain 6 columns, id, username, fullname, email, password, phonenumber).
+- A teams table (it will contain 3 columns, id, name, description).
+- A members table, (it will include 8 columns, id, teams_id, first_name, last_name, position, department, about, image_url).
 
 
 ### Usage
 
 To run the project, use the browser to enter the following path...
 
-http://localhost/crud_add_pdf_project/index.php
+http://localhost/crud_add_phpmailer/index.php
 
 In this home page you will find two links to enter the application, the signup.php form page, if you are not registered yet, or the login.php form page, if you are already registered.
-   http://localhost/crud_add_pdf_project/signup.php
+   http://localhost/crud_add_phpmailer/signup.php
 
-   http://localhost/crud_add_pdf_project/login.php
+   http://localhost/crud_add_phpmailer/login.php
 
 See the images of these two forms below.
 
@@ -123,7 +123,7 @@ And there's also an option to create a new Team, using the following form. The R
   <img src="/assets/images/team_form.PNG" alt="Sign up" width="350"  height="auto" />
 </div>
 
-For this project, we added the generation of two PDF reports to export the html content. the first one is the list of members that is displayed in the dashboard, and the second one is a specific details page, selected from the last name's link in the dashboard. The exported file is shown in the dashboard, as a pdf file, and it has a download or a print option for the user.
+In the previous project, we added the generation of two PDF reports to export the html content. the first one is the list of members that is displayed in the dashboard, and the second one is a specific details page, selected from the last name's link in the dashboard. The exported file is shown in the dashboard, as a pdf file, and it has a download or a print option for the user.
 
 Here are some example images for these two reports...
 
