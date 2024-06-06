@@ -9,6 +9,7 @@ $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if (!empty($members)) {
   foreach ($members as $row) {
     echo "<tr>
+            <td>{$row['teams_id']}</td>
             <td>{$row['firstname']}</td>
             <td><a href='/crud_add_phpmailer/member_details.php?id={$row['id']}'>{$row['lastname']}</a></td>
             <td>{$row['position']}</td>
@@ -17,8 +18,8 @@ if (!empty($members)) {
             <td><img src='{$row['image_url']}' width='50' height='auto'></td>
             <td>
                 <a href='/crud_add_phpmailer/member_form.php?id={$row['id']}'>Edit</a>
-                <a href='/crud_add_phpmailer/delete_member.php?id={$row['id']}'>Delete</a>
-                <a href='/crud_add_phpmailer/send_email.php?id={$row['id']} ?>'>Send Email</a>
+                <a href='/crud_add_phpmailer/delete_member.php?id={$row['id']}' style='color:red'>Delete</a>
+                <a href='/crud_add_phpmailer/send_email.php?id={$row['id']} ?>' style='color:green'>Send-Email</a>
             </td>
           </tr>";
   }
@@ -30,6 +31,6 @@ if (!empty($members)) {
                     text: "Please add some members.",
                 });
             </script>';
-  echo "<tr><td colspan='7'>No members found</td></tr>";
+  echo "<tr><td colspan='8'>No members found</td></tr>";
 }
 ?>

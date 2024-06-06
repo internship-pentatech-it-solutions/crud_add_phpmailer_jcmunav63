@@ -56,6 +56,7 @@
             <table id="membersTable" class="display">
               <thead>
                 <tr>
+                  <th>Team</th>
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Position</th>
