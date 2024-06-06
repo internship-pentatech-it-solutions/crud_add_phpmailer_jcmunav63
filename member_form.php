@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-  header('Location: /crud_add_pdf_project/index.php');
+  header('Location: /crud_add_phpmailer/index.php');
 }
 
 require_once 'database.php';
@@ -50,12 +50,12 @@ if (isset($_GET['id'])) {
   </head>
   <body>
     <?php if(!isset($_SESSION['user_id'])):
-      header('Location: /crud_add_pdf_project/index.php'); ?>
+      header('Location: /crud_add_phpmailer/index.php'); ?>
     <?php else: ?>
       <div class="container">
         <div class="title"><?php echo $member['id'] ? 'Edit' : 'Add'; ?> Member</div>
         <div class="content">
-          <form action="/crud_add_pdf_project/save_member.php" method="post" enctype="multipart/form-data">
+          <form action="/crud_add_phpmailer/save_member.php" method="post" enctype="multipart/form-data">
             <div class="user-details">
               <input type="hidden" name="id" value="<?php echo $member['id']; ?>">
               <div class="input-box">

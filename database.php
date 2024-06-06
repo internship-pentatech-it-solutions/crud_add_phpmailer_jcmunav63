@@ -15,7 +15,7 @@ try {
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    window.location.href = "/crud_add_pdf_project/index.php";
+                    window.location.href = "/crud_add_phpmailer/index.php";
                 });
             </script>';
   // die('Connection Failed: ' . $e->getMessage());

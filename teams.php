@@ -9,10 +9,10 @@
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    window.location.href = "/crud_add_pdf_project/login.php";
+                    window.location.href = "/crud_add_phpmailer/login.php";
                 });
             </script>';
-    header("Location: /crud_add_pdf_project/index.php");
+    header("Location: /crud_add_phpmailer/index.php");
     // exit();
   }
 ?>
@@ -37,14 +37,14 @@
   </head>
   <body>
     <?php if(!isset($_SESSION['user_id'])):
-      header('Location: /crud_add_pdf_project/index.php'); ?>
+      header('Location: /crud_add_phpmailer/index.php'); ?>
     <?php else: ?>
       <div class="dashboard-container">
         <header>
           <div class="title">Welcome to PentaTech IT-Solutions - Teams Table</div>
           <div class="header-div">
-            <button onclick="window.location.href='/crud_add_pdf_project/team_form.php'" class="dash-btn">Add Team</button>
-            <button onclick="window.location.href='/crud_add_pdf_project/dashboard.php'" class="dash-btn">Dashboard</button>
+            <button onclick="window.location.href='/crud_add_phpmailer/team_form.php'" class="dash-btn">Add Team</button>
+            <button onclick="window.location.href='/crud_add_phpmailerdashboard.php'" class="dash-btn">Dashboard</button>
             <p><a href="./logout.php" style="font-size: 1.3rem;">Logout</a></p>
           </div>
         </header>

@@ -1,7 +1,7 @@
 <?php
   session_start();
   if (isset($_SESSION['user_id'])) {
-    header('Location: /crud_add_pdf_project/dashboard.php');
+    header('Location: /crud_add_phpmailer/dashboard.php');
   }
   require 'database.php';
   $message = '';
@@ -24,11 +24,11 @@
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    window.location.href = "/crud_add_pdf_project/login.php";
+                    window.location.href = "/crud_add_phpmailer/login.php";
                 });
             </script>';
       $message = 'Successfully created new user';
-      header('Location: /crud_add_pdf_project/login.php');
+      header('Location: /crud_add_phpmailer/login.php');
     } else {
       echo '<script>
                 Swal.fire({
@@ -89,7 +89,7 @@
           <div class="button">
             <input type="submit" name="signup-button" value="Register" />
           </div>
-          <p>Already have an account? <a href="/crud_add_pdf_project/login.php">Log in</a></p>
+          <p>Already have an account? <a href="/crud_add_phpmailer/login.php">Log in</a></p>
         </form>
       </div>
     </div>

@@ -15,6 +15,6 @@ if ($id) {
     $stmt->execute([$name, $description]);
 }
 
-header("Location: /crud_add_pdf_project/dashboard.php");
+header("Location: /crud_add_phpmailer/dashboard.php");
 exit();
 ?>

@@ -30,6 +30,6 @@ if ($id) {
     $stmt->execute([$teams_id, $firstname, $lastname, $position, $department, $about, $image_url]);
 }
 
-header("Location: /crud_add_pdf_project/dashboard.php");
+header("Location: /crud_add_phpmailer/dashboard.php");
 exit();
 ?>

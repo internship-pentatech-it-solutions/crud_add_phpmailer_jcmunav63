@@ -5,5 +5,5 @@
 
   session_destroy();
 
-  header('Location: /crud_add_pdf_project/index.php');
+  header('Location: /crud_add_phpmailer/index.php');
 ?>

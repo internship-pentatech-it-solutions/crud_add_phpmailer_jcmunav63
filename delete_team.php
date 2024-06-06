@@ -26,7 +26,7 @@ if (isset($_GET['id'])) {
       // COMMIT THE TRANSACTION
       $conn->commit();
 
-      header("Location: /crud_add_pdf_project/teams.php");
+      header("Location: /crud_add_phpmailer/teams.php");
   } catch (Exception $e) {
       // ROLLBACK THE TRANSACTION IF SOMETHING HAS FAILED
       $conn->rollBack();

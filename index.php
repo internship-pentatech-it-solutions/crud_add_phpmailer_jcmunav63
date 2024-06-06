@@ -29,7 +29,7 @@
   </head>
   <body>
     <?php if(!empty($user)): 
-      header('Location: /crud_add_pdf_project/dashboard.php'); ?>
+      header('Location: /crud_add_phpmailer/dashboard.php'); ?>
     <?php else: ?>
       <div class="container">
         <div class="title">
@@ -39,9 +39,9 @@
           <div style="text-align: center;">
             <ul style="list-style: none;">
               <br />
-              <li><a href="/crud_add_pdf_project/login.php" style="font-size: 1.6rem;">Login page</a></li>
+              <li><a href="/crud_add_phpmailer/login.php" style="font-size: 1.6rem;">Login page</a></li>
               <br />
-              <li><a href="/crud_add_pdf_project/signup.php" style="font-size: 1.6rem;">SignUp page</a></li>
+              <li><a href="/crud_add_phpmailer/signup.php" style="font-size: 1.6rem;">SignUp page</a></li>
               <br />
             </ul>
           </div>

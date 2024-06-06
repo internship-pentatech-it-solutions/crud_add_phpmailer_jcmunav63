@@ -5,7 +5,7 @@ require_once 'vendor/autoload.php';
 use Dompdf\Dompdf;
 
 if (!isset($_GET['id'])) {
-  header("Location: /crud_add_pdf_project/dashboard.php");
+  header("Location: /crud_add_phpmailer/dashboard.php");
   exit();
 }
 
@@ -103,7 +103,7 @@ if (isset($_GET['generate_pdf'])) {
     <header style="margin-top: 15px; display: flex; align-items: center; justify-content: space-between;">
       <div class="title" style="font-size: 1.3rem; font-weight: 600;">PentaTech IT-Solutions - Member Details PDF Report</div><br />
       <div style="display: flex;">
-        <a href="/crud_add_pdf_project/dashboard.php" style="font-size: 1.3rem;">Dashboard</a>
+        <a href="/crud_add_phpmailer/dashboard.php" style="font-size: 1.3rem;">Dashboard</a>
         <a href="./logout.php" style="font-size: 1.3rem; margin-left: 20px;">Logout</a>
       </div>
     </header>

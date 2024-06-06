@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-  header('Location: /crud_add_pdf_project/index.php');
+  header('Location: /crud_add_phpmailer/index.php');
 }
 
 require_once 'database.php';
@@ -29,7 +29,7 @@ if (isset($_GET['id'])) {
 </head>
 <body>
   <?php if(!isset($_SESSION['user_id'])):
-    header('Location: /crud_add_pdf_project/index.php'); ?>
+    header('Location: /crud_add_phpmailer/index.php'); ?>
   <?php else: ?>
     <div class="container">
       <div class="title">
@@ -51,8 +51,7 @@ if (isset($_GET['id'])) {
           <div class="button">
             <input type="submit" value="Save">
           </div>
-          <p><a href="/crud_add_pdf_project/dashboard.php">Back to Dashboard</a></p>
-          <!-- <button onclick="window.location.href='/crud_add_pdf_project/dashboard.php'" class="dash-btn">Back to Dashboard</button> -->
+          <p><a href="/crud_add_phpmailer/dashboard.php">Back to Dashboard</a></p>
         </form>
       </div>
     </div>

@@ -12,10 +12,10 @@
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    window.location.href = "/crud_add_pdf_project/login.php";
+                    window.location.href = "/crud_add_phpmailer/login.php";
                 });
             </script>';
-    header("Location: /crud_add_pdf_project/index.php");
+    header("Location: /crud_add_phpmailer/index.php");
     // exit();
   }
 ?>
@@ -40,15 +40,15 @@
   </head>
   <body>
     <?php if(!isset($_SESSION['user_id'])):
-      header('Location: /crud_add_pdf_project/index.php'); ?>
+      header('Location: /crud_add_phpmailer/index.php'); ?>
     <?php else: ?>
       <div class="dashboard-container">
         <header>
           <div class="title">Welcome to PentaTech IT-Solutions - Team Members Dashboard</div>
           <div class="header-div">
-            <button onclick="window.location.href='/crud_add_pdf_project/teams.php'" class="dash-btn">Teams table</button>
-            <button onclick="window.location.href='/crud_add_pdf_project/member_form.php'" class="dash-btn">Add Member</button>
-            <button onclick="window.location.href='/crud_add_pdf_project/pdf_member_list.php'" class="dash-btn" target="_blank">PDF Member List</button>
+            <button onclick="window.location.href='/crud_add_phpmailer/teams.php'" class="dash-btn">Teams table</button>
+            <button onclick="window.location.href='/crud_add_phpmailer/member_form.php'" class="dash-btn">Add Member</button>
+            <button onclick="window.location.href='/crud_add_phpmailer/pdf_member_list.php'" class="dash-btn" target="_blank">PDF Member List</button>
             <p><a href="./logout.php" style="font-size: 1.3rem;">Logout</a></p>
           </div>
         </header>
