@@ -58,36 +58,23 @@
     $message = $_POST['message'];
 
     // PHPMAILER SETUP
-    $mail = new PHPMailer(true);
+    $mail = new PHPMailer();
 
     try {
       $mail->isSMTP();
-      $mail->Host = 'localhost'; // MERCURY MAIL SERVER
-      // $mail->Host = 'smtp-mail.outlook.com'; // smtp.gmail.com  smtp-mail.outlook.com  smtp.office365.com
+      $mail->Host = 'sandbox.smtp.mailtrap.io';
       $mail->SMTPAuth = true;
-      $mail->Username = 'test@localhost'; // MERCURY MAIL TEST USERNAME
-      $mail->Password = 'pass123';
-      // $mail->AuthType = 'LOGIN';
-      // $mail->SMTPSecure = 'tls';
-      // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-      $mail->Port = 25; // 587 for TLS, 465 for SSL
+      $mail->Username = 'username';
+      $mail->Password = 'secret';
+      $mail->Port = 2525;
 
       // DEBUGGING (ONLY WHEN TESTING)
-      $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-      $mail->Debugoutput = 'html';
-
-      // DISABLE SSL CERTIFICATE VERIFICATION (ONLY HOTMAIL OR GMAIL)
-      // $mail->SMTPOptions = array(
-      //   'ssl' => array(
-      //       'verify_peer' => false,
-      //       'verify_peer_name' => false,
-      //       'allow_self_signed' => true
-      //   )
-      // );
+      // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+      // $mail->Debugoutput = 'html';
 
       // SUBJECT, SENT FROM, AND BODY CONTENT
       $mail->setFrom($email, $name);
-      $mail->addAddress('jcmunav63@gmail.com');
+      $mail->addAddress('juancarlos.munoz@loyola.edu.mx');
 
       $body = "<p><strong>Name:</strong> $name</p><p><strong>Department:</strong> $department</p><p><strong>Date:</strong> $date</p><p><strong>Message:</strong> $message</p>";
 
@@ -160,10 +147,13 @@
               <span class="details" style="vertical-align: top;">Message</span>
               <textarea name="message" rows="3" style="width: 364px" required></textarea>
             </div>
+            <div class="button">
+              <input type="submit" value="Send Email" style="width: 100%; height: 34px;" class="dash-button">
+            </div>
           </div>
-          <div class="button">
+          <!-- <div class="button">
             <input type="submit" value="Send Email" style="width: 100%; height: 34px;" class="dash-button">
-          </div>
+          </div> -->
         </form>
         <a href="/crud_add_phpmailer/dashboard.php">Back to Dashboard</a>
       </div>
