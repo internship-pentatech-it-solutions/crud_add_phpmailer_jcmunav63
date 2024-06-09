@@ -1,8 +1,5 @@
 <?php
   session_start();
-  // if (!isset($_SESSION['user_id'])) {
-  //   header('Location: /crud_add_pdf_project/index.php');
-  // }
   // IF THE USER IS NOT LOGGED IN HE/SHE IS REDIRECTED TO INDEX.PHP
   if (!isset($_SESSION['user_id'])) {
     echo '<script>
@@ -16,7 +13,6 @@
                 });
             </script>';
     header("Location: /crud_add_phpmailer/index.php");
-    // exit();
   }
 ?>
 <html lang="en" dir="ltr">

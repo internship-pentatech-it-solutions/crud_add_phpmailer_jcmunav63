@@ -116,8 +116,6 @@
       }
       .user-details {
         flex-direction: column;
-        /* justify-content: center;
-        align-items: center; */
       }
     </style>
   </head>
@@ -157,9 +155,6 @@
               <input type="submit" value="Send Email" style="width: 100%; height: 34px;" class="dash-button">
             </div>
           </div>
-          <!-- <div class="button">
-            <input type="submit" value="Send Email" style="width: 100%; height: 34px;" class="dash-button">
-          </div> -->
         </form>
         <a href="/crud_add_phpmailer/dashboard.php">Back to Dashboard</a>
       </div>
