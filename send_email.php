@@ -75,13 +75,19 @@
       // SUBJECT, SENT FROM, AND BODY CONTENT
       $mail->setFrom($email, $name);
       $mail->addAddress('juancarlos.munoz@loyola.edu.mx');
+      
+      $img_contents = base64_encode(file_get_contents(__DIR__ . "/assets/images/logoPT-ITS.PNG"));
+      $logo_url = "'data:image/png;base64,$img_contents' width='100px'";
 
-      $body = "<p><strong>Name:</strong> $name</p><p><strong>Department:</strong> $department</p><p><strong>Date:</strong> $date</p><p><strong>Message:</strong> $message</p>";
+      $body = "<table><tr><td><img src=$logo_url; /></td><td><h1>PentaTech IT-Solutions - EMail Sending with PHPMailer</h1></td></tr></table>
+        <table><tr><td><p><strong>Name:</strong> $name</p></td><td><p><strong>Department:</strong> $department</p></td></tr>
+        <tr><td colspan='2'><p><strong>Date:</strong> $date</p></td></tr><tr><td colspan='2'><p><strong>Message:</strong> $message</p></td></tr></table>";
 
       $mail->isHTML(true);
       $mail->Subject = $subject;
       $mail->Body = $body;
       $mail->AltBody = strip_tags($body);
+      $mail->addAttachment('./members_list.pdf', 'members_list.pdf');
       $mail->send();
 
       echo "Email sent successfully!";
