@@ -123,7 +123,7 @@ And there's also an option to create a new Team, using the following form. The R
   <img src="/assets/images/team_form.PNG" alt="Sign up" width="350"  height="auto" />
 </div>
 
-In the previous project, we added the generation of two PDF reports to export the html content. the first one is the list of members that is displayed in the dashboard, and the second one is a specific details page, selected from the last name's link in the dashboard. The exported file is shown in the dashboard, as a pdf file, and it has a download or a print option for the user.
+In the previous projects, we added the CRUD operations for the Team Members displayed on the dashboard page, and the generation of two PDF reports exported from the html content. The first report is the list of members displayed on the dashboard, and the second report is a specific details page, selected from the last name's link on the dashboard. The exported file is shown in the browser, as a pdf file, and it has a download or a print option for the user.
 
 Here are some example images for these two reports...
 
@@ -138,6 +138,24 @@ Here are some example images for these two reports...
   <img src="/assets/images/member_details.PNG" alt="Sign up" width="550"  height="auto" /><br />
   <img src="/assets/images/member_details_pdf.PNG" alt="Sign up" width="650"  height="auto" />
 </div>
+
+In this report, we added a link to each Team Members to generate an Email. It redirects to an html form where the Team Member's data is pre-loaded and it permits the user to add a SUBJECT, to change or leave today's DATE, and to add a MESSAGE. When the user clicks the send button, the Email is generated and sent using the PHPMailer library, together with an external API SMTP Email Service (MailTrap in my case). The Email is displayed using the HTML format, including a Logo, a Title (or heading), and the data coming from the form: subject, sender's name, sender's email, sender's department, date, and the message.
+
+Here I show some images of the form and the resulting emails.
+
+  - Email form:
+<div align="center">
+  <img src="/assets/images/email_form.PNG" alt="Sign up" width="450"  height="auto" />
+</div>
+
+  - Test Email received on MailTrap inbox:
+<div align="center">
+  <img src="/assets/images/test_email1.PNG" alt="Sign up" width="450"  height="auto" />
+  <br />
+  <img src="/assets/images/test_email2.PNG" alt="Sign up" width="450"  height="auto" />
+  <br />
+  <img src="/assets/images/test_email3.PNG" alt="Sign up" width="450"  height="auto" />
+</div><br />
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
