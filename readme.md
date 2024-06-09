@@ -145,16 +145,16 @@ Here I show some images of the form and the resulting emails.
 
   - Email form:
 <div align="center">
-  <img src="/assets/images/email_form.PNG" alt="Sign up" width="450"  height="auto" />
+  <img src="/assets/images/email_form.PNG" alt="Email form" width="450"  height="auto" />
 </div>
 
   - Test Email received on MailTrap inbox:
 <div align="center">
-  <img src="/assets/images/test_email1.PNG" alt="Sign up" width="450"  height="auto" />
+  <img src="/assets/images/test_email1.PNG" alt="Email message - desktop" width="450"  height="auto" />
   <br />
-  <img src="/assets/images/test_email2.PNG" alt="Sign up" width="450"  height="auto" />
+  <img src="/assets/images/test_email2.PNG" alt="Email message - tablet" width="450"  height="auto" />
   <br />
-  <img src="/assets/images/test_email3.PNG" alt="Sign up" width="450"  height="auto" />
+  <img src="/assets/images/test_email3.PNG" alt="Email message - phone" width="450"  height="auto" />
 </div><br />
 
 
